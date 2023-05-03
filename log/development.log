@@ -873,3 +873,50 @@ Processing by PlantsController#index as HTML
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4159)
 
 
+Started GET "/" for ::1 at 2023-05-03 17:20:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oem/.rvm/gems/ruby-3.2.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oem/.rvm/gems/ruby-3.2.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 20.8ms | Allocations: 489)
+Completed 200 OK in 127ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+Started GET "/plants" for ::1 at 2023-05-03 17:21:03 +0300
+Processing by PlantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (16.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:6
+  Rendered plants/_plant.html.erb (Duration: 18.6ms | Allocations: 212)
+  Rendered plants/_plant.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered plants/index.html.erb within layouts/application (Duration: 103.3ms | Allocations: 6306)
+  Rendered layout layouts/application.html.erb (Duration: 282.7ms | Allocations: 42727)
+Completed 200 OK in 288ms (Views: 267.3ms | ActiveRecord: 17.2ms | Allocations: 44379)
+
+
+Started GET "/plants/1" for ::1 at 2023-05-03 17:21:07 +0300
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:63:in `set_plant'
+  Rendering layout layouts/application.html.erb
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/_plant.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered plants/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3774)
+Completed 200 OK in 43ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 6421)
+
+
+Started GET "/plants/1" for ::1 at 2023-05-03 17:21:52 +0300
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:63:in `set_plant'
+  Rendering layout layouts/application.html.erb
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/_plant.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered plants/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4189)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5437)
+
+
